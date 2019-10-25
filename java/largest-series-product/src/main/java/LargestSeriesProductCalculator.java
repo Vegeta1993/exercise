@@ -18,19 +18,12 @@ class LargestSeriesProductCalculator {
       throw new IllegalArgumentException("Series length must be non-negative.");
     }
 
-    if (numberOfDigits > inputNumber.length) {
-      throw new IllegalArgumentException(
-          "Series length must be less than or equal to the length of the string to search.");
-    }
-
-    for (char numberOrAlpha : inputNumber) {
-      if (!Character.isDigit(numberOrAlpha)) {
-
-      }
-    }
+    if (numberOfDigits > inputNumber.length)
+        throw new IllegalArgumentException(
+            "Series length must be less than or equal to the length of the string to search.");
 
     // Case 2: Return 1
-    if (numberOfDigits == 0 || inputNumber.length == 0) {
+    if (numberOfDigits == 0) {
       return 1;
     }
 
